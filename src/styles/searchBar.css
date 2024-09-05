@@ -1,0 +1,48 @@
+/* searchBar.css */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px; /* Manja maksimalna širina za kompaktniji izgled */
+  margin: 0 auto; /* Centriraj search bar horizontalno */
+  padding: 3px; /* Smanjen padding za kompaktniji izgled */
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Blago zaobljeni uglovi */
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Manja sjena za suptilan izgled */
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px; /* Smanjen padding za uži input */
+  font-size: 14px; /* Manji font za kompaktniji izgled */
+  border-radius: 15px; /* Blago zaobljeni uglovi inputa */
+  margin-right: 6px; /* Smanjen razmak između inputa i botuna */
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px; /* Smanjen padding za manji botun */
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #f0f0f0;
+}
+
+.search-icon {
+  width: 16px; /* Manja širina ikone za povećalo */
+  height: 16px; /* Manja visina ikone za povećalo */
+  color: #333;
+}

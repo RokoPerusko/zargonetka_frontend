@@ -1,0 +1,67 @@
+/* styles/random.css */
+
+/* Opći stilovi za RandomWordOrPhrase komponentu */
+.random-container {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .random-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .random-buttons {
+    margin-bottom: 1rem;
+  }
+  
+  .random-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0.5rem;
+  }
+  
+  .random-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .random-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .random-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .random-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .random-item p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .random-error {
+    color: red;
+    margin-top: 1rem;
+  }
+  

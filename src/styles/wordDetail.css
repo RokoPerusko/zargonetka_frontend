@@ -1,0 +1,96 @@
+/* styles/wordDetail.css */
+
+.word-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content horizontally */
+    text-align: center; /* Center text */
+    font-family: 'Merriweather', serif; /* Elegantni font za prikaz riječi */
+    max-width: 600px; /* Limit width for better readability */
+    margin: 2rem auto; /* Center content vertically with margin */
+    padding: 1rem;
+    border: 1px solid #ddd; /* Optional: Add a subtle border */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  .word-detail-container h1 {
+    font-size: 2.5rem; /* Largest font size for the word */
+    margin-bottom: 1rem; /* Space below the word */
+    color: #333; /* Dark color for contrast */
+  }
+  
+  .word-detail-container p {
+    font-size: 1rem; /* Default font size for paragraphs */
+    color: #555; /* Slightly lighter color for readability */
+    margin: 0.5rem 0; /* Margin for spacing between paragraphs */
+  }
+  
+  .word-detail-container p strong {
+    font-weight: bold; /* Bold text for strong elements */
+  }
+  
+  .word-detail-container p:nth-of-type(2) {
+    font-size: 1.4rem; /* Larger font for "Meaning" */
+    color: #333; /* Darker color for "Meaning" */
+    margin-bottom: 1rem;
+  }
+  
+  .word-detail-container p:nth-of-type(3) {
+    font-size: 1rem; /* Smaller than "Meaning" */
+    font-style: italic; /* Italic style for "Example" */
+    color: #777; /* Lighter color for contrast */
+    margin-bottom: 1.5rem; /* Additional space after example */
+  }
+  
+  .word-detail-container p:nth-of-type(4),
+  .word-detail-container p:nth-of-type(5),
+  .word-detail-container p:nth-of-type(6) {
+    font-size: 0.9rem; /* Smaller font size for less important details */
+    color: #666; /* Neutral color */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .word-detail-container {
+      max-width: 90%; /* Wider on smaller screens */
+      padding: 1rem;
+      margin: 1rem auto; /* Less margin on smaller screens */
+    }
+  
+    .word-detail-container h1 {
+      font-size: 2rem; /* Slightly smaller font size for word */
+    }
+  
+    .word-detail-container p {
+      font-size: 0.95rem; /* Adjust default font size */
+    }
+  
+    .word-detail-container p:nth-of-type(2) {
+      font-size: 1.2rem; /* Adjust size for "Meaning" */
+    }
+  
+    .word-detail-container p:nth-of-type(3) {
+      font-size: 1rem; /* Ensure "Example" is smaller */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .word-detail-container h1 {
+      font-size: 1.7rem; /* Further reduce size for very small screens */
+    }
+  
+    .word-detail-container p {
+      font-size: 0.85rem; /* Smaller font size for paragraphs */
+    }
+  
+    .word-detail-container p:nth-of-type(2) {
+      font-size: 1.1rem; /* Adjust size for "Meaning" */
+    }
+  
+    .word-detail-container p:nth-of-type(3) {
+      font-size: 0.85rem; /* Ensure "Example" remains smaller */
+      margin-bottom: 1rem; /* Less space after example */
+    }
+  }
+  

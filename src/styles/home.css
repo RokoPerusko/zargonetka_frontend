@@ -1,0 +1,165 @@
+/* styles/home.css */
+
+/* Opći stilovi za Home komponentu */
+.home-container {
+  padding: 2rem;
+  font-family: 'Merriweather', serif; /* Konzistentan font kao u words.css */
+  max-width: 800px; /* Maksimalna širina za bolju čitljivost */
+  margin: 0 auto; /* Centriranje glavnog sadržaja */
+  text-align: center; /* Centriranje teksta */
+}
+
+.main-title {
+  font-size: 2.5rem; /* Veći naslov */
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* Razmak ispod glavnog naslova */
+  color: #333; /* Tamna boja za kontrast */
+}
+
+.sub-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Poravnanje stavki s vrhom */
+  margin-bottom: 2rem; /* Razmak ispod kontejnera */
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  width: 48%; /* Svaka lista zauzima polovicu širine */
+  margin-bottom: 1rem; /* Razmak ispod podnaslova */
+  text-align: center; /* Centriranje podnaslova */
+  color: #333; /* Tamna boja za kontrast */
+  font-weight: bold; /* Bold za isticanje */
+}
+
+/* Stil za listu itema */
+.item-list {
+  width: 48%; /* Svaka lista zauzima polovicu širine */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* Stil za boxeve riječi i fraza */
+.item-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #fdfdfd; /* Lagana pozadina za kontrast */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Blaga sjena za efekt kartice */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centriranje svih elemenata unutar boxa */
+  transition: transform 0.2s, box-shadow 0.2s; /* Animacija za hover efekt */
+}
+
+.item-box:hover {
+  transform: translateY(-5px); /* Blagi lift na hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Pojačana sjena na hover */
+  background-color: #e9ecef; /* Blago drugačija pozadina na hover */
+}
+
+/* Stil za naslove, značenja, primjere i lajkove */
+.item-title {
+  font-size: 1.5rem; /* Usklađivanje s .words-item-title */
+  font-weight: bold;
+  text-transform: uppercase; /* Velika slova za dosljednost */
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.item-meaning {
+  font-size: 1rem; /* Usklađivanje s .words-item-meaning */
+  color: #555;
+  font-weight: 500; /* Polu-bold za bolji kontrast */
+  margin-bottom: 0.5rem;
+}
+
+.item-meaning::before {
+  content: "Meaning: "; /* Dodaje naznaku prije značenja */
+  font-weight: bold;
+  color: #888; /* Boja za naznaku */
+}
+
+.item-example {
+  font-size: 0.9rem; /* Usklađivanje s .words-item-example */
+  color: #777;
+  font-style: italic; /* Italic za primjer */
+  margin-bottom: 0.5rem;
+}
+
+.item-example::before {
+  content: "Example: "; /* Dodaje naznaku prije primjera */
+  font-weight: bold;
+  color: #aaa; /* Boja za naznaku primjera */
+}
+
+.item-likes {
+  display: flex;
+  justify-content: center; /* Centriranje lajkova horizontalno */
+  align-items: center; /* Centriranje lajkova vertikalno */
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.like-icon-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.like-icon {
+  font-size: 1.25rem;
+  color: #007bff; /* Default color for unliked state */
+  transition: color 0.3s; /* Animacija promjene boje */
+}
+
+.like-icon.liked {
+  color: #e74c3c; /* Color for liked state */
+}
+
+/* Stil za popup poruke */
+.popup-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  font-weight: bold;
+}
+
+.popup-message.fade-out {
+  opacity: 0;
+}
+
+/* Responzivnost */
+@media (max-width: 768px) {
+  .item-box {
+    padding: 1rem;
+  }
+
+  .item-title {
+    font-size: 1.25rem;
+  }
+
+  .item-meaning {
+    font-size: 0.95rem;
+  }
+
+  .item-example {
+    font-size: 0.85rem;
+  }
+
+  .item-likes {
+    flex-direction: column;
+    align-items: center;
+  }
+}

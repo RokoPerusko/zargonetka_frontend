@@ -1,0 +1,168 @@
+/* styles/words.css */
+
+/* Opći stilovi za Words komponentu */
+.words-container {
+  padding: 2rem;
+  font-family: 'Merriweather', serif; /* Elegantni font za prikaz riječi */
+  max-width: 800px; /* Maksimalna širina za bolju čitljivost */
+  margin: 0 auto; /* Centriranje */
+}
+
+.words-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Stil za boxeve riječi */
+.words-item-box {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fdfdfd; /* Lagana pozadina za kontrast */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Blaga sjena za efekt kartice */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s; /* Animacija za hover efekt */
+}
+
+.words-item-box:hover {
+  transform: translateY(-5px); /* Blagi lift na hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Pojačana sjena na hover */
+}
+
+.words-item-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase; /* Velika slova */
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.words-item-meaning {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500; /* Polu-bold za bolji kontrast */
+  margin-bottom: 0.5rem;
+}
+
+.words-item-meaning::before {
+  content: "Meaning: "; /* Dodaje naznaku prije značenja */
+  font-weight: bold;
+  color: #888; /* Boja za naznaku */
+}
+
+.words-item-example {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic; /* Italic za primjer */
+  margin-bottom: 0.5rem;
+}
+
+.words-item-example::before {
+  content: "Example: "; /* Dodaje naznaku prije primjera */
+  font-weight: bold;
+  color: #aaa; /* Boja za naznaku primjera */
+}
+
+.words-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Omogućava razbijanje u novi red na manjim ekranima */
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.like-icon-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.like-icon {
+  font-size: 1.25rem;
+  color: #007bff;  /* Default color for unliked state */
+  transition: color 0.3s; /* Animacija promjene boje */
+}
+
+.like-icon.liked {
+  color: #e74c3c; /* Color for liked state */
+}
+
+/* Stil za link za dodavanje riječi, pretvoren u botun */
+.add-word-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-word-link:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.add-word-link:active {
+  transform: translateY(0);
+}
+
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pagination-controls button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-controls button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responzivnost */
+@media (max-width: 768px) {
+  .words-item-box {
+      padding: 1rem;
+  }
+
+  .words-item-title {
+      font-size: 1.25rem;
+  }
+
+  .words-item-meaning {
+      font-size: 0.95rem;
+  }
+
+  .words-item-example {
+      font-size: 0.85rem;
+  }
+
+  .words-item-footer {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}

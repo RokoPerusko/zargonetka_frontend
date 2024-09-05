@@ -1,0 +1,87 @@
+/* Stil za cijeli container */
+.profile-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex; /* Postavljanje flex za glavni container */
+  flex-direction: column; /* Vertikalno postavljanje glavnih sekcija */
+  gap: 20px; /* Razmak između glavnih sekcija */
+}
+
+/* Stil za sve sekcije (Created Words, Created Phrases, Liked Words, Liked Phrases) */
+.sections-row {
+  display: flex; /* Postavljanje u red */
+  justify-content: space-between; /* Prostor između elemenata */
+  flex-wrap: wrap; /* Omogućuje prelamanje elemenata na manjim ekranima */
+  gap: 20px; /* Razmak između sekcija */
+}
+
+/* Stil za pojedinačne sekcije */
+.section {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 48%; /* Širina boxa, nešto manje od pola da stanu dva pored drugog */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-grow: 1; /* Omogućuje rastezanje prema potrebi */
+  margin-bottom: 20px; /* Donji razmak između sekcija */
+}
+
+/* Stil za popise */
+ul {
+  list-style-type: none; /* Uklanja točkice sa liste */
+  padding: 0; /* Uklanja padding sa lijeve strane */
+}
+
+/* Stil za boxeve sa stavkama */
+.item-box {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+/* Stil za naslove unutar boxeva */
+.item-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  text-decoration: none; /* Uklanja podcrtavanje iz linkova */
+}
+
+/* Stil za značenja i primjere */
+.item-meaning,
+.item-example {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Stil za datum kreiranja */
+.item-created-at {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Stil za ikone lajkova */
+.like-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* Stil za istaknute lajkane ikone */
+.like-icon.liked {
+  color: blue; /* Plava boja za lajkane ikone */
+}
+
+/* Responsivnost */
+@media (max-width: 768px) {
+  .section {
+    width: 100%; /* Sekcije će zauzimati punu širinu na manjim ekranima */
+  }
+}

@@ -1,0 +1,171 @@
+/* styles/phrases.css */
+
+.phrases-container {
+  padding: 2rem;
+  font-family: 'Merriweather', serif; /* Elegant font suitable for dictionary entries */
+  max-width: 800px;
+  margin: auto;
+}
+
+.phrases-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Stil za boxeve fraza */
+.phrases-item-box {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.phrases-item-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.phrases-item-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase; /* Displayed in uppercase */
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.phrases-item-meaning {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500; /* Semi-bold for better contrast */
+  margin-bottom: 0.5rem;
+}
+
+.phrases-item-meaning::before {
+  content: "Meaning: "; /* Prefix for meaning */
+  font-weight: bold;
+  color: #888; /* Lighter color for prefix */
+}
+
+.phrases-item-example {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic; /* Italic for example */
+  margin-bottom: 0.5rem;
+}
+
+.phrases-item-example::before {
+  content: "Example: "; /* Prefix for example */
+  font-weight: bold;
+  color: #aaa; /* Lighter color for prefix */
+}
+
+.phrases-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.like-icon-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.like-icon {
+  font-size: 1.25rem;
+  color: #007bff;  /* Default color for unliked state */
+  transition: color 0.3s; /* Animacija promjene boje */
+}
+
+.like-icon.liked {
+  color: #e74c3c; /* Color for liked state */
+}
+/* Stil za link za dodavanje riječi, pretvoren u botun */
+.add-phrase-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-phrase-link:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.add-phrase-link:active {
+  transform: translateY(0);
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination-controls button {
+  margin: 0 5px;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-controls button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .phrases-container {
+    padding: 1rem;
+  }
+
+  .phrases-item-box {
+    padding: 1rem;
+  }
+
+  .phrases-item-title {
+    font-size: 1.3rem;
+  }
+
+  .phrases-item-meaning,
+  .phrases-item-example {
+    font-size: 0.9rem;
+  }
+
+  .pagination-controls button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .phrases-item-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

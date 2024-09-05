@@ -1,0 +1,49 @@
+/* styles/sortSelector.css */
+
+.sort-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centriranje na horizontalnoj osi */
+    margin: 1rem 0; /* Razmak iznad i ispod sort selektora */
+    font-family: 'Merriweather', serif; /* Konzistentan font */
+    font-size: 1rem;
+    color: #333; /* Tamna boja za tekst */
+  }
+  
+  .sort-selector label {
+    margin-right: 0.5rem; /* Razmak između labela i selecta */
+    font-weight: bold; /* Podebljaj labelu */
+  }
+  
+  .sort-selector select {
+    padding: 0.5rem 1rem; /* Unutarnji razmak za bolju preglednost */
+    font-size: 1rem; /* Font size koji je konzistentan sa ostatkom stranice */
+    border: 1px solid #ddd; /* Lagani border */
+    border-radius: 5px; /* Blago zaobljeni rubovi */
+    background-color: #f9f9f9; /* Lagana pozadina za select */
+    color: #333; /* Tamna boja za tekst */
+    transition: border-color 0.3s ease; /* Animacija za hover efekt */
+  }
+  
+  .sort-selector select:focus {
+    border-color: #007bff; /* Plava boja za border kad je selektirano */
+    outline: none; /* Uklanja defaultni outline */
+  }
+  
+  .sort-selector select:hover {
+    border-color: #888; /* Tamniji border na hover */
+    cursor: pointer; /* Promjena kursora na hover */
+  }
+  
+  /* Responsivni stilovi */
+  @media (max-width: 768px) {
+    .sort-selector {
+      justify-content: center; /* Centriranje sort selektora na manjim ekranima */
+      font-size: 0.9rem; /* Lagano smanjenje fonta */
+    }
+  
+    .sort-selector select {
+      font-size: 0.9rem; /* Smanjeni font unutar selecta */
+    }
+  }
+  
