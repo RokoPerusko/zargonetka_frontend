@@ -12,7 +12,7 @@ function Phrases() {
   const [phrases, setPhrases] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [sortOption, setSortOption] = useState('date'); // Dodajte stanje za sortiranje
+  const [sortOption, setSortOption] = useState('date');
   const { isAuthenticated } = useContext(AuthContext);
   const [userLikes, setUserLikes] = useState(new Set());
 
@@ -26,7 +26,7 @@ function Phrases() {
         const response = await axios.get(`${process.env.REACT_APP_API_URL}/phrases/`, {
           params: {
             page: currentPage,
-            sort: sortOption // Proslijedite opciju sortiranja
+            sort: sortOption 
           }
         });
         setPhrases(response.data.results);
