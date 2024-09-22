@@ -6,7 +6,7 @@ import AuthContext from './Auth/AuthContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import '../styles/phrases.css';
-import SortSelector from './SortSelector'; // Uvezite SortSelector komponentu
+import SortSelector from './SortSelector';
 
 function Phrases() {
   const [phrases, setPhrases] = useState([]);
@@ -106,7 +106,7 @@ function Phrases() {
       {isAuthenticated && (
         <Link to="/add-phrase" className="add-phrase-link">Add Phrase</Link>
       )}
-      <SortSelector onSortChange={handleSortChange} /> {/* Dodajte SortSelector */}
+      <SortSelector onSortChange={handleSortChange} /> {/* SortSelector */}
 
       <ul className="phrases-list">
         {phrases.map(phrase => (
